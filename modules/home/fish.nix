@@ -53,8 +53,7 @@
       cds = "cd ~/.config/nix-on-droid/";
       ga = "git add -A";
       gc = "git commit -m \"";
-      gf = "git fetch origin";
-      gpo = "git pull origin master";
+      gf = "git pull origin master";
       gp = "git push -u origin master";
       gpf = "git push -u --force origin master";
       yz = "yazi";
