@@ -39,9 +39,11 @@ return {
       "bashls",
       "jsonls",
       "cssls",
-      -- .xml LS.
+      --.toml LS.
+      "taplo",
+      --.xml LS.
       "lemminx",
-      -- Markdown LS.
+      --.md Markdown LS.
       "marksman",
       "html",
       "eslint",

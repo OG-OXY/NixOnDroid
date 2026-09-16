@@ -1,8 +1,5 @@
 {
   pkgs,
-  #config,
-  #lib,
-  #inputs,
   ...
 }:
 
@@ -23,14 +20,8 @@ in
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-
     plugins = [
       catchAllTreesitter
-    ];
-    extraWrapperArgs = [
-      "--set"
-      "NVIM_TREESITTER_PARSERS"
-      "${catchAllTreesitter}/parser"
     ];
   };
 }

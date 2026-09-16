@@ -19,9 +19,7 @@ require("lazy").setup({
   ui = { backdrop = 100 },
   performance = {
     rtp = {
-      paths = {
-        vim.env.NVIM_TREESITTER_PARSERS,
-      },
+      paths = {},
       disabled_plugins = {
         --"gzip",
         --"netrwPlugin",

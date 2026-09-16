@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: 
+{ pkgs, ... }:
 {
   programs.fish = {
     enable = true;
@@ -53,6 +53,8 @@
       cds = "cd ~/.config/nix-on-droid/";
       ga = "git add -A";
       gc = "git commit -m \"";
+      gf = "git fetch origin";
+      gpo = "git pull origin master";
       gp = "git push -u origin master";
       gpf = "git push -u --force origin master";
       yz = "yazi";
@@ -66,9 +68,8 @@
       ts = "start-ssh";
     };
 
-    shellInit = ''
-    '';
-    
+    shellInit = "";
+
     interactiveShellInit = ''
       set -g fish_greeting "Welcome to Nix-On-Droid!"
       set -g fish_handle_reflow 1
@@ -80,12 +81,27 @@
     '';
 
     plugins = with pkgs.fishPlugins; [
-      { name = "bass"; src = bass.src; }
-      { name = "fzf-fish"; src = fzf-fish.src; }
-      { name = "autopair"; src = autopair.src; }
-      { name = "sponge"; src = sponge.src; }
-      { name = "done"; src = done.src; }
-      { 
+      {
+        name = "bass";
+        src = bass.src;
+      }
+      {
+        name = "fzf-fish";
+        src = fzf-fish.src;
+      }
+      {
+        name = "autopair";
+        src = autopair.src;
+      }
+      {
+        name = "sponge";
+        src = sponge.src;
+      }
+      {
+        name = "done";
+        src = done.src;
+      }
+      {
         name = "abbreviation-tips";
         src = pkgs.fetchFromGitHub {
           owner = "gazorby";

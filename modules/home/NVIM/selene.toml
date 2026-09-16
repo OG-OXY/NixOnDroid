@@ -1,5 +1,4 @@
 std = "neovim"
-
 [rules]
 global_usage = "allow"
 if_same_then_else = "allow"

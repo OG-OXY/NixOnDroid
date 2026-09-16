@@ -43,6 +43,7 @@
     ./modules/home/activation.nix
     ./modules/home/fish.nix
     ./modules/home/neovim.nix
+    #./modules/home/neo.nix
     ./modules/home/fastfetch.nix
   ];
 

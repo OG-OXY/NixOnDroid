@@ -59,6 +59,8 @@
       nodePackages.bash-language-server
       nodePackages.vscode-langservers-extracted
       nodePackages.prettier
+      # .toml
+      taplo
       # Markdown
       marksman
       # jq json cli formatter/bug squasher.
@@ -76,6 +78,7 @@
       ripgrep
       fd
       gnumake
+      #gcc
       clang
       clang-tools
       rustc

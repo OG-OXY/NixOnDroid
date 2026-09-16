@@ -19,6 +19,24 @@ return {
       virtual_text = true,
       underline = true,
     },
+    treesitter = {
+      highlight = true, -- enable/disable treesitter based highlighting
+      indent = true, -- enable/disable treesitter based indentation
+      auto_install = false, -- enable/disable automatic installation of detected languages
+      ensure_installed = {
+        --"vim",
+        --"lua",
+        --"python",
+        --"nix",
+        --"json",
+        --"css",
+        --"lemminx",
+        --"norg",
+        --"norg_meta",
+        --"markdown",
+        --"java",
+      },
+    },
     -- passed to `vim.filetype.add`
     filetypes = {
       -- see `:h vim.filetype.add` for usage
@@ -45,7 +63,9 @@ return {
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
-        ts_query_path = vim.fn.expand "$HOME" .. "/.nix-profile/share/vim-plugins/nvim-treesitter",
+
+        --ts_query_path = vim.env.NVIM_TREESITTER_PARSERS,
+        --ts_query_path = vim.fn.expand "$HOME" .. "/.nix-profile/share/vim-plugins/nvim-treesitter",
       },
     },
     -- Mappings can be configured through AstroCore as well.

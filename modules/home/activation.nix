@@ -1,6 +1,13 @@
-{ pkgs, config, lib, inputs, ... }: {
+{
+  pkgs,
+  config,
+  lib,
+  inputs,
+  ...
+}:
+{
   home.activation = {
-    linkStorageDirect = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    linkStorageDirect = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       if [ ! -L "$HOME/sdcard" ]; then
         $DRY_RUN_CMD mkdir -p "$HOME/sdcard"
         $DRY_RUN_CMD rm -rf "$HOME/sdcard"
@@ -9,7 +16,7 @@
       if [ ! -L "$HOME/Downloads" ]; then
         $DRY_RUN_CMD mkdir -p "$HOME/Downloads"
         $DRY_RUN_CMD rm -rf "$HOME/Downloads"
-        $DRY_RUN_CMD ln -s /sdcard/Download "$HOME/Downloads/"
+        $DRY_RUN_CMD ln -s /sdcard/Downloads "$HOME/Downloads/"
       fi
       if [ ! -L "$HOME/Documents" ]; then
         $DRY_RUN_CMD mkdir -p "$HOME/Documents"
@@ -39,8 +46,8 @@
       if [ ! -L "$HOME/Media/Camera" ]; then
         $DRY_RUN_CMD mkdir -p "$HOME/Media"
         $DRY_RUN_CMD rm -rf "$HOME/Media/Camera"
-        $DRY_RUN_CMD ln -s /sdcard/DCIM "$HOME/Media/Camera/"
+        $DRY_RUN_CMD ln -s /sdcard/Camera "$HOME/Media/Camera/"
       fi
     '';
   };
-}	
+}
